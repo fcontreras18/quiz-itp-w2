@@ -39,7 +39,12 @@ def eldest_customer_per_state(customers):
     }
     """
     # Write your code here
-    pass
+    eldest = ''
+    for key, value in customers.items():
+        for k, v in value:
+            if k > eldest:
+                eldest += k
+    return eldest
 
 
 class EldestCustomerTestCase(unittest.TestCase):
